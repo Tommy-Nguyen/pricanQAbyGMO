@@ -15,15 +15,25 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rf6-Br-8re">
-                    <rect key="frame" x="85" y="269" width="46" height="30"/>
+                <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KtF-2O-3FI">
+                    <rect key="frame" x="0.0" y="519" width="320" height="49"/>
                     <animations/>
-                    <state key="normal" title="Button"/>
-                </button>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <items>
+                        <tabBarItem systemItem="favorites" id="7gh-IM-iWT"/>
+                        <tabBarItem systemItem="more" id="Xao-aX-FeQ"/>
+                    </items>
+                </tabBar>
             </subviews>
             <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="KtF-2O-3FI" secondAttribute="trailing" id="N76-6K-bJY"/>
+                <constraint firstAttribute="bottom" secondItem="KtF-2O-3FI" secondAttribute="bottom" id="apd-f4-pPi"/>
+                <constraint firstItem="KtF-2O-3FI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="e2m-zM-cG7"/>
+            </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="354" y="408"/>
         </view>
     </objects>
 </document>

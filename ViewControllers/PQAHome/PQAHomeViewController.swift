@@ -8,12 +8,14 @@
 
 import UIKit
 
-class PQAHomeViewController: UIViewController {
+class PQAHomeViewController: PQABaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        self.navigationItem.title = "Home View"
     }
 
     override func didReceiveMemoryWarning() {
