@@ -7,3 +7,5 @@
 //
 
 import Foundation
+
+var    kTabBarHeight:Int = 55

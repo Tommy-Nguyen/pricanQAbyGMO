@@ -12,6 +12,7 @@ class PQABaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self .setUpNavigationBar()
 
         // Do any additional setup after loading the view.
     }
@@ -24,7 +25,6 @@ class PQABaseViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBarHidden = false
-        self .setUpNavigationBar()
     }
     
     /*
