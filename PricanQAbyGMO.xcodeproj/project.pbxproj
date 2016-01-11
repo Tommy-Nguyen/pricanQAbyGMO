@@ -12,6 +12,13 @@
 		5F9B2E051C43526400BD2FB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F9B2E031C43526400BD2FB9 /* Main.storyboard */; };
 		5F9B2E071C43526400BD2FB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F9B2E061C43526400BD2FB9 /* Assets.xcassets */; };
 		5F9B2E0A1C43526400BD2FB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F9B2E081C43526400BD2FB9 /* LaunchScreen.storyboard */; };
+		5F9B2E181C43532000BD2FB9 /* FontUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9B2E161C43532000BD2FB9 /* FontUtils.swift */; };
+		5F9B2E191C43532000BD2FB9 /* UIUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9B2E171C43532000BD2FB9 /* UIUtils.swift */; };
+		5F9B2E1C1C43532900BD2FB9 /* MFResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9B2E1B1C43532900BD2FB9 /* MFResponse.swift */; };
+		5F9B2E231C43533500BD2FB9 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9B2E1F1C43533500BD2FB9 /* Common.swift */; };
+		5F9B2E241C43533500BD2FB9 /* DefineNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9B2E201C43533500BD2FB9 /* DefineNames.swift */; };
+		5F9B2E251C43533500BD2FB9 /* ExtensionClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9B2E211C43533500BD2FB9 /* ExtensionClass.swift */; };
+		5F9B2E261C43533500BD2FB9 /* Macros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9B2E221C43533500BD2FB9 /* Macros.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +29,13 @@
 		5F9B2E061C43526400BD2FB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F9B2E091C43526400BD2FB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F9B2E0B1C43526400BD2FB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F9B2E161C43532000BD2FB9 /* FontUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontUtils.swift; sourceTree = "<group>"; };
+		5F9B2E171C43532000BD2FB9 /* UIUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIUtils.swift; sourceTree = "<group>"; };
+		5F9B2E1B1C43532900BD2FB9 /* MFResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFResponse.swift; sourceTree = "<group>"; };
+		5F9B2E1F1C43533500BD2FB9 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		5F9B2E201C43533500BD2FB9 /* DefineNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefineNames.swift; sourceTree = "<group>"; };
+		5F9B2E211C43533500BD2FB9 /* ExtensionClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionClass.swift; sourceTree = "<group>"; };
+		5F9B2E221C43533500BD2FB9 /* Macros.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Macros.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +52,14 @@
 		5F9B2DF31C43526400BD2FB9 = {
 			isa = PBXGroup;
 			children = (
+				5F9B2E271C43533D00BD2FB9 /* ThirdParty */,
+				5F9B2E1E1C43533500BD2FB9 /* Common */,
+				5F9B2E1D1C43532E00BD2FB9 /* Managers */,
+				5F9B2E1A1C43532900BD2FB9 /* Model */,
+				5F9B2E141C43532000BD2FB9 /* Utilities */,
+				5F9B2E131C43531800BD2FB9 /* ViewControllers */,
+				5F9B2E121C43531100BD2FB9 /* Custom Classes */,
+				5F9B2E111C43530600BD2FB9 /* Resources */,
 				5F9B2DFE1C43526400BD2FB9 /* PricanQAbyGMO */,
 				5F9B2DFD1C43526400BD2FB9 /* Products */,
 			);
@@ -62,6 +84,77 @@
 				5F9B2E0B1C43526400BD2FB9 /* Info.plist */,
 			);
 			path = PricanQAbyGMO;
+			sourceTree = "<group>";
+		};
+		5F9B2E111C43530600BD2FB9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5F9B2E121C43531100BD2FB9 /* Custom Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Custom Classes";
+			sourceTree = "<group>";
+		};
+		5F9B2E131C43531800BD2FB9 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5F9B2E141C43532000BD2FB9 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5F9B2E151C43532000BD2FB9 /* Utils */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		5F9B2E151C43532000BD2FB9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5F9B2E161C43532000BD2FB9 /* FontUtils.swift */,
+				5F9B2E171C43532000BD2FB9 /* UIUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		5F9B2E1A1C43532900BD2FB9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5F9B2E1B1C43532900BD2FB9 /* MFResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5F9B2E1D1C43532E00BD2FB9 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		5F9B2E1E1C43533500BD2FB9 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				5F9B2E1F1C43533500BD2FB9 /* Common.swift */,
+				5F9B2E201C43533500BD2FB9 /* DefineNames.swift */,
+				5F9B2E211C43533500BD2FB9 /* ExtensionClass.swift */,
+				5F9B2E221C43533500BD2FB9 /* Macros.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		5F9B2E271C43533D00BD2FB9 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ThirdParty;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +228,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F9B2E261C43533500BD2FB9 /* Macros.swift in Sources */,
 				5F9B2E021C43526400BD2FB9 /* ViewController.swift in Sources */,
+				5F9B2E1C1C43532900BD2FB9 /* MFResponse.swift in Sources */,
+				5F9B2E251C43533500BD2FB9 /* ExtensionClass.swift in Sources */,
+				5F9B2E181C43532000BD2FB9 /* FontUtils.swift in Sources */,
 				5F9B2E001C43526400BD2FB9 /* AppDelegate.swift in Sources */,
+				5F9B2E231C43533500BD2FB9 /* Common.swift in Sources */,
+				5F9B2E241C43533500BD2FB9 /* DefineNames.swift in Sources */,
+				5F9B2E191C43532000BD2FB9 /* UIUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +386,7 @@
 				5F9B2E101C43526400BD2FB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
