@@ -8,4 +8,4 @@
 
 import Foundation
 
-var    kTabBarHeight:Int = 55
+var kTabBarHeight:Int = 55

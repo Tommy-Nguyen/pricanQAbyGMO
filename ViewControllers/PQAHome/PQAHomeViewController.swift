@@ -24,6 +24,13 @@ class PQAHomeViewController: PQABaseViewController {
     }
     
 
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        NetworkManager .sharedManager .getListDataFromServer { (responseObect: NSMutableArray) -> Void in
+            //
+        }
+    }
     /*
     // MARK: - Navigation
 

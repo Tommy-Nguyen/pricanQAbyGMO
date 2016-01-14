@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        let mainViewController : PQADashboardViewController = PQADashboardViewController()
+        let mainViewController : PQAHomeViewController = PQAHomeViewController()
         
         self.pqaNavigation = UINavigationController()
         self.pqaNavigation! .pushViewController(mainViewController, animated: true)
