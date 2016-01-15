@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PQAHomeViewController" customModule="PricanQAbyGMO" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="JY1-YV-xSN" id="Qgc-TF-6XN"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -30,7 +31,7 @@
                 <constraint firstAttribute="bottom" secondItem="JY1-YV-xSN" secondAttribute="bottom" id="jjN-CJ-fMO"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-            <point key="canvasLocation" x="427" y="404"/>
+            <point key="canvasLocation" x="378" y="401"/>
         </view>
     </objects>
 </document>

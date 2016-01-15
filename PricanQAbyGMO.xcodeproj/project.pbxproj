@@ -8,6 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		5F28B4FA1C488C780060A274 /* Consultation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F28B4F91C488C780060A274 /* Consultation.swift */; };
+		5F28B5121C48985D0060A274 /* FrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F28B4FC1C48985D0060A274 /* FrameView.swift */; };
+		5F28B5131C48985D0060A274 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F28B4FD1C48985D0060A274 /* Images.xcassets */; };
+		5F28B5141C48985D0060A274 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5F28B4FE1C48985D0060A274 /* Info.plist */; };
+		5F28B5151C48985D0060A274 /* PKHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F28B5001C48985D0060A274 /* PKHUD.swift */; };
+		5F28B5161C48985D0060A274 /* PKHUDAnimating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F28B5011C48985D0060A274 /* PKHUDAnimating.swift */; };
+		5F28B5171C48985D0060A274 /* PKHUDAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F28B5021C48985D0060A274 /* PKHUDAnimation.swift */; };
+		5F28B5181C48985D0060A274 /* PKHUDAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F28B5031C48985D0060A274 /* PKHUDAssets.swift */; };
+		5F28B5191C48985D0060A274 /* PKHUDErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F28B5041C48985D0060A274 /* PKHUDErrorView.swift */; };
+		5F28B51A1C48985D0060A274 /* PKHUDImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F28B5051C48985D0060A274 /* PKHUDImageView.swift */; };
+		5F28B51B1C48985D0060A274 /* PKHUDProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F28B5061C48985D0060A274 /* PKHUDProgressView.swift */; };
+		5F28B51C1C48985D0060A274 /* PKHUDSquareBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F28B5071C48985D0060A274 /* PKHUDSquareBaseView.swift */; };
+		5F28B51D1C48985D0060A274 /* PKHUDStatusProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F28B5081C48985D0060A274 /* PKHUDStatusProgressView.swift */; };
+		5F28B51E1C48985D0060A274 /* PKHUDStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F28B5091C48985D0060A274 /* PKHUDStatusView.swift */; };
+		5F28B51F1C48985D0060A274 /* PKHUDSubtitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F28B50A1C48985D0060A274 /* PKHUDSubtitleView.swift */; };
+		5F28B5201C48985D0060A274 /* PKHUDSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F28B50B1C48985D0060A274 /* PKHUDSuccessView.swift */; };
+		5F28B5211C48985D0060A274 /* PKHUDSystemActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F28B50C1C48985D0060A274 /* PKHUDSystemActivityIndicatorView.swift */; };
+		5F28B5221C48985D0060A274 /* PKHUDTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F28B50D1C48985D0060A274 /* PKHUDTextView.swift */; };
+		5F28B5231C48985D0060A274 /* PKHUDTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F28B50E1C48985D0060A274 /* PKHUDTitleView.swift */; };
+		5F28B5241C48985D0060A274 /* PKHUDWideBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F28B50F1C48985D0060A274 /* PKHUDWideBaseView.swift */; };
+		5F28B5251C48985D0060A274 /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F28B5101C48985D0060A274 /* Window.swift */; };
+		5F28B5261C48985D0060A274 /* WindowRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F28B5111C48985D0060A274 /* WindowRootViewController.swift */; };
+		5F28B52A1C489DCE0060A274 /* PQACustomHomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F28B5281C489DCE0060A274 /* PQACustomHomeTableViewCell.swift */; };
+		5F28B52B1C489DCE0060A274 /* PQACustomHomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F28B5291C489DCE0060A274 /* PQACustomHomeTableViewCell.xib */; };
+		5F28B52F1C48A96C0060A274 /* PQAHomeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F28B52D1C48A96C0060A274 /* PQAHomeDetailViewController.swift */; };
+		5F28B5301C48A96C0060A274 /* PQAHomeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F28B52E1C48A96C0060A274 /* PQAHomeDetailViewController.xib */; };
 		5F52B22D1C478B5900CEF79E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F52B22C1C478B5900CEF79E /* NetworkManager.swift */; };
 		5F9946B01C4387E5009A49CE /* PQAHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9946AE1C4387E5009A49CE /* PQAHomeViewController.swift */; };
 		5F9946B11C4387E5009A49CE /* PQAHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F9946AF1C4387E5009A49CE /* PQAHomeViewController.xib */; };
@@ -30,6 +55,32 @@
 
 /* Begin PBXFileReference section */
 		5F28B4F91C488C780060A274 /* Consultation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Consultation.swift; sourceTree = "<group>"; };
+		5F28B4FC1C48985D0060A274 /* FrameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameView.swift; sourceTree = "<group>"; };
+		5F28B4FD1C48985D0060A274 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5F28B4FE1C48985D0060A274 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F28B4FF1C48985D0060A274 /* PKHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKHUD.h; sourceTree = "<group>"; };
+		5F28B5001C48985D0060A274 /* PKHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUD.swift; sourceTree = "<group>"; };
+		5F28B5011C48985D0060A274 /* PKHUDAnimating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDAnimating.swift; sourceTree = "<group>"; };
+		5F28B5021C48985D0060A274 /* PKHUDAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDAnimation.swift; sourceTree = "<group>"; };
+		5F28B5031C48985D0060A274 /* PKHUDAssets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDAssets.swift; sourceTree = "<group>"; };
+		5F28B5041C48985D0060A274 /* PKHUDErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDErrorView.swift; sourceTree = "<group>"; };
+		5F28B5051C48985D0060A274 /* PKHUDImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDImageView.swift; sourceTree = "<group>"; };
+		5F28B5061C48985D0060A274 /* PKHUDProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDProgressView.swift; sourceTree = "<group>"; };
+		5F28B5071C48985D0060A274 /* PKHUDSquareBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDSquareBaseView.swift; sourceTree = "<group>"; };
+		5F28B5081C48985D0060A274 /* PKHUDStatusProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDStatusProgressView.swift; sourceTree = "<group>"; };
+		5F28B5091C48985D0060A274 /* PKHUDStatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDStatusView.swift; sourceTree = "<group>"; };
+		5F28B50A1C48985D0060A274 /* PKHUDSubtitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDSubtitleView.swift; sourceTree = "<group>"; };
+		5F28B50B1C48985D0060A274 /* PKHUDSuccessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDSuccessView.swift; sourceTree = "<group>"; };
+		5F28B50C1C48985D0060A274 /* PKHUDSystemActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDSystemActivityIndicatorView.swift; sourceTree = "<group>"; };
+		5F28B50D1C48985D0060A274 /* PKHUDTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDTextView.swift; sourceTree = "<group>"; };
+		5F28B50E1C48985D0060A274 /* PKHUDTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDTitleView.swift; sourceTree = "<group>"; };
+		5F28B50F1C48985D0060A274 /* PKHUDWideBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDWideBaseView.swift; sourceTree = "<group>"; };
+		5F28B5101C48985D0060A274 /* Window.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
+		5F28B5111C48985D0060A274 /* WindowRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowRootViewController.swift; sourceTree = "<group>"; };
+		5F28B5281C489DCE0060A274 /* PQACustomHomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PQACustomHomeTableViewCell.swift; sourceTree = "<group>"; };
+		5F28B5291C489DCE0060A274 /* PQACustomHomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PQACustomHomeTableViewCell.xib; sourceTree = "<group>"; };
+		5F28B52D1C48A96C0060A274 /* PQAHomeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PQAHomeDetailViewController.swift; sourceTree = "<group>"; };
+		5F28B52E1C48A96C0060A274 /* PQAHomeDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PQAHomeDetailViewController.xib; sourceTree = "<group>"; };
 		5F52B22C1C478B5900CEF79E /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		5F9946AE1C4387E5009A49CE /* PQAHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PQAHomeViewController.swift; sourceTree = "<group>"; };
 		5F9946AF1C4387E5009A49CE /* PQAHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PQAHomeViewController.xib; sourceTree = "<group>"; };
@@ -66,6 +117,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F28B4FB1C48985D0060A274 /* PKHUD */ = {
+			isa = PBXGroup;
+			children = (
+				5F28B4FC1C48985D0060A274 /* FrameView.swift */,
+				5F28B4FD1C48985D0060A274 /* Images.xcassets */,
+				5F28B4FE1C48985D0060A274 /* Info.plist */,
+				5F28B4FF1C48985D0060A274 /* PKHUD.h */,
+				5F28B5001C48985D0060A274 /* PKHUD.swift */,
+				5F28B5011C48985D0060A274 /* PKHUDAnimating.swift */,
+				5F28B5021C48985D0060A274 /* PKHUDAnimation.swift */,
+				5F28B5031C48985D0060A274 /* PKHUDAssets.swift */,
+				5F28B5041C48985D0060A274 /* PKHUDErrorView.swift */,
+				5F28B5051C48985D0060A274 /* PKHUDImageView.swift */,
+				5F28B5061C48985D0060A274 /* PKHUDProgressView.swift */,
+				5F28B5071C48985D0060A274 /* PKHUDSquareBaseView.swift */,
+				5F28B5081C48985D0060A274 /* PKHUDStatusProgressView.swift */,
+				5F28B5091C48985D0060A274 /* PKHUDStatusView.swift */,
+				5F28B50A1C48985D0060A274 /* PKHUDSubtitleView.swift */,
+				5F28B50B1C48985D0060A274 /* PKHUDSuccessView.swift */,
+				5F28B50C1C48985D0060A274 /* PKHUDSystemActivityIndicatorView.swift */,
+				5F28B50D1C48985D0060A274 /* PKHUDTextView.swift */,
+				5F28B50E1C48985D0060A274 /* PKHUDTitleView.swift */,
+				5F28B50F1C48985D0060A274 /* PKHUDWideBaseView.swift */,
+				5F28B5101C48985D0060A274 /* Window.swift */,
+				5F28B5111C48985D0060A274 /* WindowRootViewController.swift */,
+			);
+			path = PKHUD;
+			sourceTree = "<group>";
+		};
+		5F28B5271C489D900060A274 /* PQACustomHomeViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				5F28B5281C489DCE0060A274 /* PQACustomHomeTableViewCell.swift */,
+				5F28B5291C489DCE0060A274 /* PQACustomHomeTableViewCell.xib */,
+			);
+			path = PQACustomHomeViewCell;
+			sourceTree = "<group>";
+		};
+		5F28B52C1C48A9590060A274 /* PQAHomeDetail */ = {
+			isa = PBXGroup;
+			children = (
+				5F28B52D1C48A96C0060A274 /* PQAHomeDetailViewController.swift */,
+				5F28B52E1C48A96C0060A274 /* PQAHomeDetailViewController.xib */,
+			);
+			path = PQAHomeDetail;
+			sourceTree = "<group>";
+		};
 		5F9B2DF31C43526400BD2FB9 = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +212,7 @@
 		5F9B2E121C43531100BD2FB9 /* Custom Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5F28B5271C489D900060A274 /* PQACustomHomeViewCell */,
 			);
 			path = "Custom Classes";
 			sourceTree = "<group>";
@@ -176,6 +275,7 @@
 		5F9B2E271C43533D00BD2FB9 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				5F28B4FB1C48985D0060A274 /* PKHUD */,
 			);
 			path = ThirdParty;
 			sourceTree = "<group>";
@@ -191,6 +291,7 @@
 		5F9B2E301C436D8900BD2FB9 /* PQAHome */ = {
 			isa = PBXGroup;
 			children = (
+				5F28B52C1C48A9590060A274 /* PQAHomeDetail */,
 				5F9946AE1C4387E5009A49CE /* PQAHomeViewController.swift */,
 				5F9946AF1C4387E5009A49CE /* PQAHomeViewController.xib */,
 			);
@@ -284,11 +385,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F28B52B1C489DCE0060A274 /* PQACustomHomeTableViewCell.xib in Resources */,
+				5F28B5301C48A96C0060A274 /* PQAHomeDetailViewController.xib in Resources */,
 				5F9946B11C4387E5009A49CE /* PQAHomeViewController.xib in Resources */,
 				5F9B2E0A1C43526400BD2FB9 /* LaunchScreen.storyboard in Resources */,
 				5F9B2E071C43526400BD2FB9 /* Assets.xcassets in Resources */,
+				5F28B5131C48985D0060A274 /* Images.xcassets in Resources */,
 				5F9B2E051C43526400BD2FB9 /* Main.storyboard in Resources */,
 				A962D6741C43FF4400D720DE /* PQADashboardViewController.xib in Resources */,
+				5F28B5141C48985D0060A274 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,17 +453,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F28B4FA1C488C780060A274 /* Consultation.swift in Sources */,
+				5F28B51A1C48985D0060A274 /* PKHUDImageView.swift in Sources */,
+				5F28B51D1C48985D0060A274 /* PKHUDStatusProgressView.swift in Sources */,
+				5F28B5201C48985D0060A274 /* PKHUDSuccessView.swift in Sources */,
+				5F28B51E1C48985D0060A274 /* PKHUDStatusView.swift in Sources */,
+				5F28B5211C48985D0060A274 /* PKHUDSystemActivityIndicatorView.swift in Sources */,
+				5F28B5191C48985D0060A274 /* PKHUDErrorView.swift in Sources */,
+				5F28B5251C48985D0060A274 /* Window.swift in Sources */,
 				5F52B22D1C478B5900CEF79E /* NetworkManager.swift in Sources */,
 				5F9B2E261C43533500BD2FB9 /* Macros.swift in Sources */,
+				5F28B52A1C489DCE0060A274 /* PQACustomHomeTableViewCell.swift in Sources */,
+				5F28B51B1C48985D0060A274 /* PKHUDProgressView.swift in Sources */,
+				5F28B5221C48985D0060A274 /* PKHUDTextView.swift in Sources */,
+				5F28B5171C48985D0060A274 /* PKHUDAnimation.swift in Sources */,
+				5F28B5161C48985D0060A274 /* PKHUDAnimating.swift in Sources */,
+				5F28B52F1C48A96C0060A274 /* PQAHomeDetailViewController.swift in Sources */,
 				5F9B2E1C1C43532900BD2FB9 /* MFResponse.swift in Sources */,
+				5F28B5151C48985D0060A274 /* PKHUD.swift in Sources */,
+				5F28B5241C48985D0060A274 /* PKHUDWideBaseView.swift in Sources */,
 				5F9B2E251C43533500BD2FB9 /* ExtensionClass.swift in Sources */,
+				5F28B5231C48985D0060A274 /* PKHUDTitleView.swift in Sources */,
 				5F9B2E181C43532000BD2FB9 /* FontUtils.swift in Sources */,
+				5F28B5261C48985D0060A274 /* WindowRootViewController.swift in Sources */,
 				5F9B2E001C43526400BD2FB9 /* AppDelegate.swift in Sources */,
 				5F9B2E231C43533500BD2FB9 /* Common.swift in Sources */,
 				5F9B2E241C43533500BD2FB9 /* DefineNames.swift in Sources */,
+				5F28B51C1C48985D0060A274 /* PKHUDSquareBaseView.swift in Sources */,
 				5F9B2E2E1C435B8D00BD2FB9 /* PQABaseViewController.swift in Sources */,
+				5F28B5181C48985D0060A274 /* PKHUDAssets.swift in Sources */,
 				A962D6731C43FF4400D720DE /* PQADashboardViewController.swift in Sources */,
 				5F9946B01C4387E5009A49CE /* PQAHomeViewController.swift in Sources */,
+				5F28B5121C48985D0060A274 /* FrameView.swift in Sources */,
+				5F28B51F1C48985D0060A274 /* PKHUDSubtitleView.swift in Sources */,
 				5F9B2E191C43532000BD2FB9 /* UIUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

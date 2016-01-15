@@ -8,4 +8,7 @@
 
 import Foundation
 
-let kBaseURL       = "http://www.json-generator.com/api/json/get/cfJoaXblBu?indent=2"
+let kBaseURL            = "http://www.json-generator.com/api/json/get/cfJoaXblBu?indent=2"
+
+let kLoadingTitle                   : String = "Loading..."
+let kCustomHomeCellIdentifier       : String = "kCustomHomeCellIdentifier"

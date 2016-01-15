@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Managers/NetworkManager.swift"
-            timestampString = "474518501.820928"
+            filePath = "ViewControllers/PQAHome/PQAHomeViewController.swift"
+            timestampString = "474524747.836745"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "getListDataFromServer(_:)"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "tableView(_:cellForRowAtIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,62 +25,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Managers/NetworkManager.swift"
-            timestampString = "474518605.740565"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "getListDataFromServer(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "ViewControllers/PQAHome/PQAHomeViewController.swift"
-            timestampString = "474518614.200636"
+            timestampString = "474532994.038994"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "viewWillAppear(_:)"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "tableView(_:didDeselectRowAtIndexPath:)"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "PricanQAbyGMO.PQAHomeViewController.viewWillAppear (PricanQAbyGMO.PQAHomeViewController)(Swift.Bool) -&gt; ()"
-                  moduleName = "PricanQAbyGMO"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dev-minhnn/Documents/pricanQAbyGMO/ViewControllers/PQAHome/PQAHomeViewController.swift"
-                  timestampString = "474518686.518732"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "70">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "PricanQAbyGMO.PQAHomeViewController.(viewWillAppear (PricanQAbyGMO.PQAHomeViewController) -&gt; (Swift.Bool) -&gt; ()).(closure #1)"
-                  moduleName = "PricanQAbyGMO"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dev-minhnn/Documents/pricanQAbyGMO/ViewControllers/PQAHome/PQAHomeViewController.swift"
-                  timestampString = "474518686.519066"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "32"
-                  endingLineNumber = "32"
-                  offsetFromSymbolStart = "12">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

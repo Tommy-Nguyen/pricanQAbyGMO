@@ -10,47 +10,41 @@ import UIKit
 
 class Consultation: NSObject {
     
-    var is_watch    : String = ""
-    var created_at  : String = ""
-    var user_id     : String = ""
-    var is_like     : String = ""
+    var objDes      : String = ""
+    var nickname    : String = ""
+    var urlImage    : String = ""
 
+    var age         : Int = 0
+    
+    var watch_count     : Int = 0
+    var comment_count   : Int = 0
+    var like_count      : Int = 0
+    
+    var has_best_answer : String = ""
+    var is_watched      : String = ""
     var consultation_id : String = ""
     var is_commented    : String = ""
     var new_flag        : String = ""
-    var comment_count   : String = ""
-    
-    var like_count      : String = ""
-    var has_best_answer : String = ""
-    var is_watched      : String = ""
-    var watch_count     : String = ""
-    var anonymous_no    : String = ""
-    
-    var nickname    : String = ""
-    var age         : String = ""
     var categories  : NSArray = []
-
-    var objDescription : String = ""
-//    var thumbnail_urls : [String : String] = []
+    var anonymous_no    : String = ""
+    var is_watch    : Bool = false
+    var created_at  : String = ""
+    var user_id     : String = ""
+    var is_like     : String = ""
     
-    init(JSONString: String) {
-        super.init()
+    init(dict: NSDictionary) {
         
-        var error: NSError?
+        let json = dict .valueForKey("consultation") as! NSDictionary
+        let jsonThum = json .valueForKey("thumbnail_urls") as! NSDictionary
+
+        self.age        = json["age"] as! Int
+        self.urlImage   = jsonThum["default"] as! String
         
-//        let JSONData = JSONString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
-//        
-//        let JSONDictionary: Dictionary = NSJSONSerialization.JSONObjectWithData(JSONData, options: nil, error: &error) as NSDictionary
-//        
-//        // Loop
-//        for (key, value) in JSONDictionary {
-//            let keyName = key as String
-//            let keyValue: String = value as String
-//            
-//            // If property exists
-//            if (self.respondsToSelector(NSSelectorFromString(keyName))) {
-//                self.setValue(keyValue, forKey: keyName)
-//            }
-//        }
+        self.objDes         = json["description"] as! String
+        self.nickname       = json["nickname"] as! String
+
+        self.like_count     = json["like_count"] as! Int
+        self.watch_count    = json["watch_count"] as! Int
+        self.comment_count  = json["comment_count"] as! Int
     }
 }
