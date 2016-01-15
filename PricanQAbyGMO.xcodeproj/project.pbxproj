@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F28B4FA1C488C780060A274 /* Consultation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F28B4F91C488C780060A274 /* Consultation.swift */; };
 		5F52B22D1C478B5900CEF79E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F52B22C1C478B5900CEF79E /* NetworkManager.swift */; };
 		5F9946B01C4387E5009A49CE /* PQAHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9946AE1C4387E5009A49CE /* PQAHomeViewController.swift */; };
 		5F9946B11C4387E5009A49CE /* PQAHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F9946AF1C4387E5009A49CE /* PQAHomeViewController.xib */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F28B4F91C488C780060A274 /* Consultation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Consultation.swift; sourceTree = "<group>"; };
 		5F52B22C1C478B5900CEF79E /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		5F9946AE1C4387E5009A49CE /* PQAHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PQAHomeViewController.swift; sourceTree = "<group>"; };
 		5F9946AF1C4387E5009A49CE /* PQAHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PQAHomeViewController.xib; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				5F9B2E1B1C43532900BD2FB9 /* MFResponse.swift */,
+				5F28B4F91C488C780060A274 /* Consultation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F28B4FA1C488C780060A274 /* Consultation.swift in Sources */,
 				5F52B22D1C478B5900CEF79E /* NetworkManager.swift in Sources */,
 				5F9B2E261C43533500BD2FB9 /* Macros.swift in Sources */,
 				5F9B2E1C1C43532900BD2FB9 /* MFResponse.swift in Sources */,

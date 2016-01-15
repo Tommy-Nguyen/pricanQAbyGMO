@@ -34,6 +34,14 @@ class NetworkManager: NSObject {
                 
                 if let JSON = response.result.value {
                     print("JSON: \(JSON)")
+                        
+                    do {
+                        if let jsonResult = try NSJSONSerialization.JSONObjectWithData(response.data!, options: []) as? NSDictionary {
+                            print(jsonResult)
+                        }
+                    } catch let error as NSError {
+                        print(error.localizedDescription)
+                    }
                 }
         }
     }
