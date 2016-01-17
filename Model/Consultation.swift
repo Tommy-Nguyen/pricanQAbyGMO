@@ -32,9 +32,11 @@ class Consultation: NSObject {
     var user_id     : String = ""
     var is_like     : String = ""
     
-    init(dict: NSDictionary) {
+    init(json: AnyObject) {
         
-        let json = dict .valueForKey("consultation") as! NSDictionary
+//        DLog("mess -- \(dict)")
+//        let json = dict .valueForKey("consultation") as! NSDictionary
+
         let jsonThum = json .valueForKey("thumbnail_urls") as! NSDictionary
 
         self.age        = json["age"] as! Int

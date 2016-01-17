@@ -34,15 +34,12 @@
 		5F28B52F1C48A96C0060A274 /* PQAHomeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F28B52D1C48A96C0060A274 /* PQAHomeDetailViewController.swift */; };
 		5F28B5301C48A96C0060A274 /* PQAHomeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F28B52E1C48A96C0060A274 /* PQAHomeDetailViewController.xib */; };
 		5F52B22D1C478B5900CEF79E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F52B22C1C478B5900CEF79E /* NetworkManager.swift */; };
-		5F9946B01C4387E5009A49CE /* PQAHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9946AE1C4387E5009A49CE /* PQAHomeViewController.swift */; };
-		5F9946B11C4387E5009A49CE /* PQAHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F9946AF1C4387E5009A49CE /* PQAHomeViewController.xib */; };
 		5F9B2E001C43526400BD2FB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9B2DFF1C43526400BD2FB9 /* AppDelegate.swift */; };
 		5F9B2E051C43526400BD2FB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F9B2E031C43526400BD2FB9 /* Main.storyboard */; };
 		5F9B2E071C43526400BD2FB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F9B2E061C43526400BD2FB9 /* Assets.xcassets */; };
 		5F9B2E0A1C43526400BD2FB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F9B2E081C43526400BD2FB9 /* LaunchScreen.storyboard */; };
 		5F9B2E181C43532000BD2FB9 /* FontUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9B2E161C43532000BD2FB9 /* FontUtils.swift */; };
 		5F9B2E191C43532000BD2FB9 /* UIUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9B2E171C43532000BD2FB9 /* UIUtils.swift */; };
-		5F9B2E1C1C43532900BD2FB9 /* MFResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9B2E1B1C43532900BD2FB9 /* MFResponse.swift */; };
 		5F9B2E231C43533500BD2FB9 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9B2E1F1C43533500BD2FB9 /* Common.swift */; };
 		5F9B2E241C43533500BD2FB9 /* DefineNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9B2E201C43533500BD2FB9 /* DefineNames.swift */; };
 		5F9B2E251C43533500BD2FB9 /* ExtensionClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9B2E211C43533500BD2FB9 /* ExtensionClass.swift */; };
@@ -51,6 +48,8 @@
 		A5F65B393281237D9A160355 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B808E2DC387A847880FAD3 /* Pods.framework */; };
 		A962D6731C43FF4400D720DE /* PQADashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A962D6711C43FF4400D720DE /* PQADashboardViewController.swift */; };
 		A962D6741C43FF4400D720DE /* PQADashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A962D6721C43FF4400D720DE /* PQADashboardViewController.xib */; };
+		A9FE10051C4BD64000327194 /* PQAHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE10031C4BD64000327194 /* PQAHomeViewController.swift */; };
+		A9FE10061C4BD64000327194 /* PQAHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9FE10041C4BD64000327194 /* PQAHomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,8 +81,6 @@
 		5F28B52D1C48A96C0060A274 /* PQAHomeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PQAHomeDetailViewController.swift; sourceTree = "<group>"; };
 		5F28B52E1C48A96C0060A274 /* PQAHomeDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PQAHomeDetailViewController.xib; sourceTree = "<group>"; };
 		5F52B22C1C478B5900CEF79E /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		5F9946AE1C4387E5009A49CE /* PQAHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PQAHomeViewController.swift; sourceTree = "<group>"; };
-		5F9946AF1C4387E5009A49CE /* PQAHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PQAHomeViewController.xib; sourceTree = "<group>"; };
 		5F9B2DFC1C43526400BD2FB9 /* PricanQAbyGMO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PricanQAbyGMO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F9B2DFF1C43526400BD2FB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F9B2E041C43526400BD2FB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -92,7 +89,6 @@
 		5F9B2E0B1C43526400BD2FB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F9B2E161C43532000BD2FB9 /* FontUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontUtils.swift; sourceTree = "<group>"; };
 		5F9B2E171C43532000BD2FB9 /* UIUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIUtils.swift; sourceTree = "<group>"; };
-		5F9B2E1B1C43532900BD2FB9 /* MFResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFResponse.swift; sourceTree = "<group>"; };
 		5F9B2E1F1C43533500BD2FB9 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		5F9B2E201C43533500BD2FB9 /* DefineNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefineNames.swift; sourceTree = "<group>"; };
 		5F9B2E211C43533500BD2FB9 /* ExtensionClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionClass.swift; sourceTree = "<group>"; };
@@ -103,6 +99,8 @@
 		9C8EF589E1456338211EE097 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A962D6711C43FF4400D720DE /* PQADashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PQADashboardViewController.swift; sourceTree = "<group>"; };
 		A962D6721C43FF4400D720DE /* PQADashboardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PQADashboardViewController.xib; sourceTree = "<group>"; };
+		A9FE10031C4BD64000327194 /* PQAHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PQAHomeViewController.swift; sourceTree = "<group>"; };
+		A9FE10041C4BD64000327194 /* PQAHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PQAHomeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,7 +245,6 @@
 		5F9B2E1A1C43532900BD2FB9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5F9B2E1B1C43532900BD2FB9 /* MFResponse.swift */,
 				5F28B4F91C488C780060A274 /* Consultation.swift */,
 			);
 			path = Model;
@@ -291,9 +288,9 @@
 		5F9B2E301C436D8900BD2FB9 /* PQAHome */ = {
 			isa = PBXGroup;
 			children = (
+				A9FE10031C4BD64000327194 /* PQAHomeViewController.swift */,
+				A9FE10041C4BD64000327194 /* PQAHomeViewController.xib */,
 				5F28B52C1C48A9590060A274 /* PQAHomeDetail */,
-				5F9946AE1C4387E5009A49CE /* PQAHomeViewController.swift */,
-				5F9946AF1C4387E5009A49CE /* PQAHomeViewController.xib */,
 			);
 			path = PQAHome;
 			sourceTree = "<group>";
@@ -387,13 +384,13 @@
 			files = (
 				5F28B52B1C489DCE0060A274 /* PQACustomHomeTableViewCell.xib in Resources */,
 				5F28B5301C48A96C0060A274 /* PQAHomeDetailViewController.xib in Resources */,
-				5F9946B11C4387E5009A49CE /* PQAHomeViewController.xib in Resources */,
 				5F9B2E0A1C43526400BD2FB9 /* LaunchScreen.storyboard in Resources */,
 				5F9B2E071C43526400BD2FB9 /* Assets.xcassets in Resources */,
 				5F28B5131C48985D0060A274 /* Images.xcassets in Resources */,
 				5F9B2E051C43526400BD2FB9 /* Main.storyboard in Resources */,
 				A962D6741C43FF4400D720DE /* PQADashboardViewController.xib in Resources */,
 				5F28B5141C48985D0060A274 /* Info.plist in Resources */,
+				A9FE10061C4BD64000327194 /* PQAHomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,6 +456,7 @@
 				5F28B51E1C48985D0060A274 /* PKHUDStatusView.swift in Sources */,
 				5F28B5211C48985D0060A274 /* PKHUDSystemActivityIndicatorView.swift in Sources */,
 				5F28B5191C48985D0060A274 /* PKHUDErrorView.swift in Sources */,
+				A9FE10051C4BD64000327194 /* PQAHomeViewController.swift in Sources */,
 				5F28B5251C48985D0060A274 /* Window.swift in Sources */,
 				5F52B22D1C478B5900CEF79E /* NetworkManager.swift in Sources */,
 				5F9B2E261C43533500BD2FB9 /* Macros.swift in Sources */,
@@ -468,7 +466,6 @@
 				5F28B5171C48985D0060A274 /* PKHUDAnimation.swift in Sources */,
 				5F28B5161C48985D0060A274 /* PKHUDAnimating.swift in Sources */,
 				5F28B52F1C48A96C0060A274 /* PQAHomeDetailViewController.swift in Sources */,
-				5F9B2E1C1C43532900BD2FB9 /* MFResponse.swift in Sources */,
 				5F28B5151C48985D0060A274 /* PKHUD.swift in Sources */,
 				5F28B5241C48985D0060A274 /* PKHUDWideBaseView.swift in Sources */,
 				5F9B2E251C43533500BD2FB9 /* ExtensionClass.swift in Sources */,
@@ -482,7 +479,6 @@
 				5F9B2E2E1C435B8D00BD2FB9 /* PQABaseViewController.swift in Sources */,
 				5F28B5181C48985D0060A274 /* PKHUDAssets.swift in Sources */,
 				A962D6731C43FF4400D720DE /* PQADashboardViewController.swift in Sources */,
-				5F9946B01C4387E5009A49CE /* PQAHomeViewController.swift in Sources */,
 				5F28B5121C48985D0060A274 /* FrameView.swift in Sources */,
 				5F28B51F1C48985D0060A274 /* PKHUDSubtitleView.swift in Sources */,
 				5F9B2E191C43532000BD2FB9 /* UIUtils.swift in Sources */,

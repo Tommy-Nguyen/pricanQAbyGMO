@@ -8,7 +8,6 @@
 
 import UIKit
 import Alamofire
-import SwiftyJSON
 import PKHUD
 
 class NetworkManager: NSObject {
@@ -49,11 +48,12 @@ class NetworkManager: NSObject {
                     if let dict = JSON as? [String: AnyObject] {
                         for key in ["cards"] {
                             if let dictValue = dict[key] {
-                                if let subArray = dictValue as? NSMutableArray {
-                                    for var i = 1 ; i < subArray.count ; i++ {
-                                        let objSub = subArray .objectAtIndex(i) as! NSDictionary
-                                        DLog("'\(objSub)'")
-                                        arrayResponse .addObject(objSub)
+                                for var i = 1 ; i < dictValue.count ; i++ {
+                                    let objSub = dictValue .objectAtIndex(i) as! [String: AnyObject]
+                                    for key2 in ["consultation"] {
+                                        if let conDictionary = objSub[key2] {
+                                            arrayResponse .addObject(conDictionary)
+                                        }
                                     }
                                 }
                             } else {

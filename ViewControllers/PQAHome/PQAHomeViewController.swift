@@ -10,7 +10,7 @@ import UIKit
 
 class PQAHomeViewController: PQABaseViewController, UITableViewDelegate, UITableViewDataSource {
 
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var homeTableView: UITableView!
     
     var list : NSMutableArray = []
     
@@ -19,9 +19,9 @@ class PQAHomeViewController: PQABaseViewController, UITableViewDelegate, UITable
 
         // Do any additional setup after loading the view.
         
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
-        self.tableView .registerNib(UINib(nibName: "PQACustomHomeTableViewCell", bundle: nil), forCellReuseIdentifier: kCustomHomeCellIdentifier)
+        self.homeTableView.delegate = self
+        self.homeTableView.dataSource = self
+        self.homeTableView .registerNib(UINib(nibName: "PQACustomHomeTableViewCell", bundle: nil), forCellReuseIdentifier: kCustomHomeCellIdentifier)
         
         self.navigationItem.title = "Home View"
     }
@@ -39,7 +39,7 @@ class PQAHomeViewController: PQABaseViewController, UITableViewDelegate, UITable
         NetworkManager .sharedManager .getListDataFromServer { (responseObect: NSMutableArray) -> Void in
             NetworkManager .sharedManager .hideAnimatedProgressHUD()
             self.list = responseObect
-            self.tableView .reloadData()
+            self.homeTableView .reloadData()
         }
     }
     
@@ -62,28 +62,21 @@ class PQAHomeViewController: PQABaseViewController, UITableViewDelegate, UITable
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView .dequeueReusableCellWithIdentifier(kCustomHomeCellIdentifier, forIndexPath: indexPath) as! PQACustomHomeTableViewCell
         
-        let objDict = self.list .objectAtIndex(indexPath.section) as! NSDictionary
+        let objDict = self.list .objectAtIndex(indexPath.section)
         
-        let objConsultation = Consultation(dict: objDict)
+        let objConsultation = Consultation(json: objDict)
         
         cell .fillDataToCell(objConsultation)
         
         cell.accessoryType = UITableViewCellAccessoryType.None
-        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
-        cell.accessoryType = UITableViewCellAccessoryType.DetailDisclosureButton
-        cell.accessoryType = UITableViewCellAccessoryType.Checkmark
-        
-        cell.accessoryType = UITableViewCellAccessoryType.DetailButton
-        cell.accessoryType = UITableViewCellAccessoryType.None
         cell.selectionStyle = UITableViewCellSelectionStyle.None;
         cell.separatorInset = UIEdgeInsetsMake(0, 1000, 0, 0);
-
         cell.backgroundColor =  RGBColor(239, g: 239, b: 244)
         
         return cell
     }
     
-    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let detailCell = PQAHomeDetailViewController .init(nibName: "PQAHomeDetailViewController", bundle: nil)
         self.navigationController! .pushViewController(detailCell, animated: true)
     }
