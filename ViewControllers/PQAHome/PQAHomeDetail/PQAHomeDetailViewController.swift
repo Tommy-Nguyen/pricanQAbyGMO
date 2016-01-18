@@ -36,6 +36,8 @@ class PQAHomeDetailViewController: UIViewController {
         
         self.avatar.layer.cornerRadius = self.avatar.frame.size.width / 2
         self.scrollView.backgroundColor = RGBColor(239, g: 239, b: 244)
+        
+        UIBarButtonItem .appearance() .setBackButtonTitlePositionAdjustment(UIOffset.init(horizontal: 0, vertical: -60), forBarMetrics: UIBarMetrics.Default)
     }
 
     override func didReceiveMemoryWarning() {

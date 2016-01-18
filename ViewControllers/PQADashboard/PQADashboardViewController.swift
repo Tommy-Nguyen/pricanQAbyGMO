@@ -8,11 +8,19 @@
 
 import UIKit
 
+let myCGFloat = CGFloat(-8)
+
 class PQADashboardViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self .createTabBarView()
+        
+        for var currentTabBarItem in self.tabBar.items! {
+            if currentTabBarItem.title == "" {
+                currentTabBarItem.imageInsets = UIEdgeInsetsMake(myCGFloat, myCGFloat, myCGFloat, myCGFloat);
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,6 +33,9 @@ class PQADashboardViewController: UITabBarController {
         //
     }
 
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+    }
     /*
     // MARK: - Navigation
 
@@ -37,7 +48,7 @@ class PQADashboardViewController: UITabBarController {
 
     func createTabBarView() {
         let pqaHomeVC = PQABaseViewController() as PQABaseViewController
-        pqaHomeVC.view.backgroundColor = UIColor .redColor();
+        pqaHomeVC.view.backgroundColor = UIColor .whiteColor();
         
         let pqaSearchVC = PQABaseViewController() as PQABaseViewController
         pqaSearchVC.view.backgroundColor = UIColor .blueColor();
@@ -82,5 +93,11 @@ class PQADashboardViewController: UITabBarController {
         pqaMyPageNav.tabBarItem.tag = 4
         
         self.viewControllers = [pqaHomeNav, pqaSearchNav, pqaCenterNav, pqaInformationNav, pqaMyPageNav]
+    }
+    
+    override func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem) {
+        if item.title == "" {
+            item.imageInsets = UIEdgeInsetsMake(myCGFloat, myCGFloat, myCGFloat, myCGFloat);
+        }
     }
 }

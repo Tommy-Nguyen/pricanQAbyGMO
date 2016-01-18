@@ -16,16 +16,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        let mainViewController : PQAHomeViewController = PQAHomeViewController()
-        
-        self.pqaNavigation = UINavigationController()
-        self.pqaNavigation! .pushViewController(mainViewController, animated: true)
+        let mainViewController : PQADashboardViewController = PQADashboardViewController()
         
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         self.window?.backgroundColor = UIColor.clearColor()
         
-        self.window?.rootViewController = self.pqaNavigation
+        self.window?.rootViewController = mainViewController
         self.window?.makeKeyAndVisible()
+        
+        if let tabBarController = self.window!.rootViewController as? UITabBarController {
+            tabBarController.selectedIndex = 2
+        }
 
         return true
     }

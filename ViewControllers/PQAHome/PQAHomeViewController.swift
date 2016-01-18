@@ -19,11 +19,10 @@ class PQAHomeViewController: PQABaseViewController, UITableViewDelegate, UITable
 
         // Do any additional setup after loading the view.
         
+        self.navigationItem.title = "Home"
         self.homeTableView.delegate = self
         self.homeTableView.dataSource = self
         self.homeTableView .registerNib(UINib(nibName: "PQACustomHomeTableViewCell", bundle: nil), forCellReuseIdentifier: kCustomHomeCellIdentifier)
-        
-        self.navigationItem.title = "Home View"
     }
 
     override func didReceiveMemoryWarning() {

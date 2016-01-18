@@ -32,11 +32,10 @@ class PQABaseViewController: UIViewController {
     */
 
     func setUpNavigationBar() {
-        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
         
-        let nav = self.navigationController?.navigationBar
-        nav?.barTintColor = colorWithHexString("ff86a1")
-        nav?.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
+        UINavigationBar.appearance().barTintColor = colorWithHexString("ff86a1")
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
         
         let rightButton: UIButton = UIButton()
         
@@ -55,6 +54,10 @@ class PQABaseViewController: UIViewController {
     /*
     // MARK: - Custom TabBar
     */
+    
+    func positionForBar(bar: UIBarPositioning) -> UIBarPosition {
+        return UIBarPosition.TopAttached
+    }
     
     func addCenterButtonWithImage(buttonImage: UIImage, highlightImage: UIImage?) {
         //
