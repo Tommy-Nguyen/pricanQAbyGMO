@@ -63,7 +63,6 @@ class PQAHomeViewController: PQABaseViewController, UITableViewDelegate, UITable
         let cell = tableView .dequeueReusableCellWithIdentifier(kCustomHomeCellIdentifier, forIndexPath: indexPath) as! PQACustomHomeTableViewCell
         
         let objDict = self.list .objectAtIndex(indexPath.section)
-        
         let objConsultation = Consultation(json: objDict)
         
         cell .fillDataToCell(objConsultation)
@@ -77,7 +76,12 @@ class PQAHomeViewController: PQABaseViewController, UITableViewDelegate, UITable
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let detailCell = PQAHomeDetailViewController .init(nibName: "PQAHomeDetailViewController", bundle: nil)
+        let detailCell = PQAHomeDetailViewController .init(nibName: "PQAHomeDetailViewController", bundle: NSBundle.mainBundle())
+        
+        let objDict = self.list .objectAtIndex(indexPath.section)
+        let objConsultation = Consultation(json: objDict)
+        detailCell.objConsultation = objConsultation
+        
         self.navigationController! .pushViewController(detailCell, animated: true)
     }
 }

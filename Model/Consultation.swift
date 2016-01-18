@@ -34,9 +34,10 @@ class Consultation: NSObject {
     
     init(json: AnyObject) {
         
-//        DLog("mess -- \(dict)")
-//        let json = dict .valueForKey("consultation") as! NSDictionary
-
+        if (json .isEqual("")) {
+            return
+        }
+        
         let jsonThum = json .valueForKey("thumbnail_urls") as! NSDictionary
 
         self.age        = json["age"] as! Int
