@@ -64,6 +64,7 @@ class PQAHomeViewController: PQABaseViewController, UITableViewDelegate, UITable
         let objDict = self.list .objectAtIndex(indexPath.section)
         let objConsultation = Consultation(json: objDict)
         
+        cell.btnActionDummy .addTarget(self, action: "pressActiveDummyRandom:", forControlEvents: UIControlEvents.TouchUpInside)
         cell .fillDataToCell(objConsultation)
         
         cell.accessoryType = UITableViewCellAccessoryType.None
@@ -74,6 +75,10 @@ class PQAHomeViewController: PQABaseViewController, UITableViewDelegate, UITable
         return cell
     }
     
+    /*
+    // MARK: - UITableView Delegate
+    */
+    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let detailCell = PQAHomeDetailViewController .init(nibName: "PQAHomeDetailViewController", bundle: NSBundle.mainBundle())
         
@@ -82,5 +87,11 @@ class PQAHomeViewController: PQABaseViewController, UITableViewDelegate, UITable
         detailCell.objConsultation = objConsultation
         
         self.navigationController! .pushViewController(detailCell, animated: true)
+    }
+    
+    func pressActiveDummyRandom(sender: AnyObject) {
+        let alert = UIAlertController(title: "Alert", message: "Message", preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
     }
 }

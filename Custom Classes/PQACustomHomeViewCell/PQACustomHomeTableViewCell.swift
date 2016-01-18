@@ -18,6 +18,7 @@ class PQACustomHomeTableViewCell: UITableViewCell {
     @IBOutlet weak var numberLike: UILabel!
     @IBOutlet weak var numberComment: UILabel!
     @IBOutlet weak var numberWatch: UILabel!
+    @IBOutlet weak var btnActionDummy: UIButton!
 
     override func awakeFromNib() {
         super.awakeFromNib()

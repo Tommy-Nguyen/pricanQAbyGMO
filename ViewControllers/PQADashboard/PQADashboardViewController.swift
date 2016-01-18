@@ -21,6 +21,11 @@ class PQADashboardViewController: UITabBarController {
                 currentTabBarItem.imageInsets = UIEdgeInsetsMake(myCGFloat, myCGFloat, myCGFloat, myCGFloat);
             }
         }
+        
+        UITabBar.appearance().backgroundImage = UIImage(named: "tabBar1")
+        self.tabBar.setValue(true, forKey: "_hidesShadow")
+
+        self.tabBarController?.tabBar.clipsToBounds = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,9 +38,6 @@ class PQADashboardViewController: UITabBarController {
         //
     }
 
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-    }
     /*
     // MARK: - Navigation
 

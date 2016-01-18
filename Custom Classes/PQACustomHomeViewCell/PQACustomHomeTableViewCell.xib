@@ -120,11 +120,23 @@
                                     <constraint firstAttribute="width" constant="50" id="SGv-4b-9Ou"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcn-HL-Alj">
+                                <rect key="frame" x="262" y="202" width="30" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Chp-bA-D45"/>
+                                    <constraint firstAttribute="width" constant="30" id="Ct6-SG-XLJ"/>
+                                </constraints>
+                                <state key="normal" title="...">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ZUH-ch-Dv2" firstAttribute="leading" secondItem="Ila-hv-J8M" secondAttribute="trailing" constant="8" id="1ey-lW-Eya"/>
+                            <constraint firstItem="lcn-HL-Alj" firstAttribute="centerY" secondItem="IeD-3f-4GK" secondAttribute="centerY" constant="-5" id="3dd-e4-cuO"/>
                             <constraint firstItem="dCC-7n-Xoi" firstAttribute="top" secondItem="ZUH-ch-Dv2" secondAttribute="bottom" constant="8" id="4wG-AL-f3p"/>
                             <constraint firstItem="Ila-hv-J8M" firstAttribute="leading" secondItem="8aT-mu-2zk" secondAttribute="leading" constant="5" id="6pq-lE-wJd"/>
                             <constraint firstItem="Y7s-Fy-h1i" firstAttribute="centerY" secondItem="ZUH-ch-Dv2" secondAttribute="centerY" id="9zx-Yb-grw"/>
@@ -132,6 +144,7 @@
                             <constraint firstItem="Ila-hv-J8M" firstAttribute="top" secondItem="8aT-mu-2zk" secondAttribute="top" constant="5" id="Mm5-RC-kqq"/>
                             <constraint firstItem="ZUH-ch-Dv2" firstAttribute="top" secondItem="8aT-mu-2zk" secondAttribute="top" constant="8" id="RnN-8h-6Rp"/>
                             <constraint firstItem="IeD-3f-4GK" firstAttribute="centerY" secondItem="Gcb-qO-qDA" secondAttribute="centerY" id="UcJ-gW-0Fz"/>
+                            <constraint firstAttribute="trailing" secondItem="lcn-HL-Alj" secondAttribute="trailing" constant="8" id="Vcn-ZI-QuU"/>
                             <constraint firstItem="IeD-3f-4GK" firstAttribute="leading" secondItem="Gcb-qO-qDA" secondAttribute="trailing" constant="8" id="jAj-8M-lXE"/>
                             <constraint firstItem="Y7s-Fy-h1i" firstAttribute="leading" secondItem="ZUH-ch-Dv2" secondAttribute="trailing" constant="8" id="uwr-tf-c3B"/>
                             <constraint firstItem="Gcb-qO-qDA" firstAttribute="leading" secondItem="O9G-ch-QSz" secondAttribute="trailing" constant="8" id="zKq-dk-0I6"/>
@@ -156,6 +169,7 @@
             <connections>
                 <outlet property="age" destination="Y7s-Fy-h1i" id="bfo-Dp-wbC"/>
                 <outlet property="avatar" destination="Ila-hv-J8M" id="1tp-HW-sXz"/>
+                <outlet property="btnActionDummy" destination="lcn-HL-Alj" id="6RE-3V-4AY"/>
                 <outlet property="name" destination="ZUH-ch-Dv2" id="Ovh-oO-ctE"/>
                 <outlet property="numberComment" destination="0ek-iI-76f" id="mrr-Cf-qiL"/>
                 <outlet property="numberLike" destination="xK8-bQ-oqa" id="mHX-Gf-cQx"/>
@@ -163,7 +177,7 @@
                 <outlet property="userDescription" destination="dCC-7n-Xoi" id="3L2-6O-NJE"/>
                 <outlet property="viewContaint" destination="8aT-mu-2zk" id="BTx-nJ-435"/>
             </connections>
-            <point key="canvasLocation" x="-867" y="150"/>
+            <point key="canvasLocation" x="-1220" y="5"/>
         </tableViewCell>
     </objects>
     <resources>
