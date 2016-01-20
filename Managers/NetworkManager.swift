@@ -74,16 +74,11 @@ class NetworkManager: NSObject {
         let list: NSMutableArray = []
 
         for result in json["cards"].arrayValue {
-            let house_ad:JSON = result["house_ad"]
             let consultationJSON:JSON = result["consultation"]
             
-            if house_ad.null == nil {
-                DLog("\(house_ad)")
-            }
-            else  {
+            if consultationJSON.null == nil {
                 let objConsultation:Consultation = Consultation(json: consultationJSON)
                 list .addObject(objConsultation)
-                DLog("\(objConsultation)")
             }
         }
         return list
@@ -99,5 +94,11 @@ class NetworkManager: NSObject {
     func hideAnimatedProgressHUD(){
         PKHUD.sharedHUD.contentView = PKHUDSuccessView()
         PKHUD.sharedHUD.hide()
+    }
+    
+    func getDataFromUrl(url:NSURL, completion: ((data: NSData?, response: NSURLResponse?, error: NSError? ) -> Void)) {
+        NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) in
+            completion(data: data, response: response, error: error)
+            }.resume()
     }
 }

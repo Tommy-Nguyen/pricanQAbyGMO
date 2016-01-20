@@ -56,12 +56,16 @@ class PQAHomeDetailViewController: UIViewController {
 
     func fillDataToDetailView() {
         let url = NSURL(string: "\(self.objConsultation.urlImage)")
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
-            let image =  UIImage(data: NSData(contentsOfURL: url!)!)! as UIImage
-            dispatch_async(dispatch_get_main_queue()) {
-                self.avatar.image = image
+
+        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+        NetworkManager .sharedManager .getDataFromUrl(url!) { (data, response, error)  in
+            dispatch_async(dispatch_get_global_queue(priority, 0)) {
+                dispatch_async(dispatch_get_main_queue()) { () -> Void in
+                    guard let data = data where error == nil else { return }
+                    self.avatar.image = UIImage(data: data)
+                }
             }
-        })
+        }
         
         self.lbName.text = self.objConsultation.nickname
         self.lbAge.text = "\(self.objConsultation.age)"

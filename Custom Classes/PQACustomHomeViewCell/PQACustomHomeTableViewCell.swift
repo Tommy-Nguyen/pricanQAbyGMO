@@ -37,11 +37,14 @@ class PQACustomHomeTableViewCell: UITableViewCell {
     
     func fillDataToCell(objConsultation: Consultation) {
         let url = NSURL(string: "\(objConsultation.urlImage)")
+        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
         
-        getDataFromUrl(url!) { (data, response, error)  in
-            dispatch_async(dispatch_get_main_queue()) { () -> Void in
-                guard let data = data where error == nil else { return }
-                self.avatar.image = UIImage(data: data)
+        NetworkManager .sharedManager .getDataFromUrl(url!) { (data, response, error)  in
+            dispatch_async(dispatch_get_global_queue(priority, 0)) {
+                dispatch_async(dispatch_get_main_queue()) { () -> Void in
+                    guard let data = data where error == nil else { return }
+                    self.avatar.image = UIImage(data: data)
+                }
             }
         }
         
@@ -52,13 +55,5 @@ class PQACustomHomeTableViewCell: UITableViewCell {
         self.numberLike.text = "\(objConsultation.like_count)"
         self.numberComment.text = "\(objConsultation.comment_count)"
         self.numberWatch.text = "\(objConsultation.watch_count)"
-    }
-    
-    // Image is download from server by this method
-    
-    func getDataFromUrl(url:NSURL, completion: ((data: NSData?, response: NSURLResponse?, error: NSError? ) -> Void)) {
-        NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) in
-            completion(data: data, response: response, error: error)
-            }.resume()
     }
 }
