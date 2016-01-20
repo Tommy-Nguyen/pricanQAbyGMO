@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class Consultation: NSObject {
     
@@ -32,22 +33,20 @@ class Consultation: NSObject {
     var user_id     : String = ""
     var is_like     : String = ""
     
-    init(json: AnyObject) {
+    init(json: JSON) {
         
-        if (json .isEqual("")) {
+        if (json.null != nil) {
             return
         }
         
-        let jsonThum = json .valueForKey("thumbnail_urls") as! NSDictionary
-
-        self.age        = json["age"] as! Int
-        self.urlImage   = jsonThum["default"] as! String
+        self.urlImage = json["thumbnail_urls"]["default"].stringValue
+        self.age      = json["age"].int!
         
-        self.objDes         = json["description"] as! String
-        self.nickname       = json["nickname"] as! String
+        self.objDes         = json["description"].string!
+        self.nickname       = json["nickname"].string!
 
-        self.like_count     = json["like_count"] as! Int
-        self.watch_count    = json["watch_count"] as! Int
-        self.comment_count  = json["comment_count"] as! Int
+        self.like_count     = json["like_count"].int!
+        self.watch_count    = json["watch_count"].int!
+        self.comment_count  = json["comment_count"].int!
     }
 }

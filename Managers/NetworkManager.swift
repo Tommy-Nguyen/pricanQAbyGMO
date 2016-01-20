@@ -9,9 +9,10 @@
 import UIKit
 import Alamofire
 import PKHUD
+import SwiftyJSON
 
 class NetworkManager: NSObject {
-
+    
     class var sharedManager: NetworkManager {
         struct Singleton {
             static var once_token: dispatch_once_t = 0
@@ -32,43 +33,63 @@ class NetworkManager: NSObject {
                 print(response.data)     // server data
                 print(response.result)   // result of response serialization
                 
-                let arrayResponse : NSMutableArray = []
-
-                if let JSON = response.result.value {
-                    print("JSON: \(JSON)")
-                        
-                    do {
-                        if let jsonResult = try NSJSONSerialization.JSONObjectWithData(response.data!, options: []) as? NSDictionary {
-                            print(jsonResult)
-                        }
-                    } catch let error as NSError {
-                        print(error.localizedDescription)
-                    }
-                    
-                    if let dict = JSON as? [String: AnyObject] {
-                        for key in ["cards"] {
-                            if let dictValue = dict[key] {
-                                for var i = 1 ; i < dictValue.count ; i++ {
-                                    let objSub = dictValue .objectAtIndex(i) as! [String: AnyObject]
-                                    for key2 in ["consultation"] {
-                                        if let conDictionary = objSub[key2] {
-                                            arrayResponse .addObject(conDictionary)
-                                        }
-                                    }
-                                }
-                            } else {
-                                print("Key '\(key)' not found")
-                            }
-                        }
-                    }
-                }
+                var arrayResponse : NSMutableArray = []
+                
+                let JSONDATA = JSON(response.result.value!)
+                arrayResponse = self .parseJSON(JSONDATA)
+                
+//                if JSONDATA {
+//                    print("JSON: \(JSONDATA)")
+//                    
+//                    //                    do {
+//                    //                        if let jsonResult = try NSJSONSerialization.JSONObjectWithData(response.data!, options: []) as? NSDictionary {
+//                    //                            print(jsonResult)
+//                    //                        }
+//                    //                    } catch let error as NSError {
+//                    //                        print(error.localizedDescription)
+//                    //                    }
+//                    
+//                    if let dict = JSONDATA as? [String: AnyObject] {
+//                        for key in ["cards"] {
+//                            if let dictValue = dict[key] {
+//                                for var i = 1 ; i < dictValue.count ; i++ {
+//                                    let objSub = dictValue .objectAtIndex(i) as! [String: AnyObject]
+//                                    for key2 in ["consultation"] {
+//                                        if let conDictionary = objSub[key2] {
+//                                            arrayResponse .addObject(conDictionary)
+//                                        }
+//                                    }
+//                                }
+//                            } else {
+//                                print("Key '\(key)' not found")
+//                            }
+//                        }
+//                    }
+//                }
                 complitionHandler(responseObect: arrayResponse)
         }
     }
     
-    /*
-    // MARK - HUD Progress
-    */
+    func parseJSON(json: JSON) -> (NSMutableArray) {
+        let list: NSMutableArray = []
+
+        for result in json["cards"].arrayValue {
+            let house_ad:JSON = result["house_ad"]
+            let consultationJSON:JSON = result["consultation"]
+            
+            if house_ad.null == nil {
+                DLog("\(house_ad)")
+            }
+            else  {
+                let objConsultation:Consultation = Consultation(json: consultationJSON)
+                list .addObject(objConsultation)
+                DLog("\(objConsultation)")
+            }
+        }
+        return list
+    }
+    
+    // MARK: - HUD Progress
     
     func showAnimatedProgressHUD(title : String) {
         PKHUD.sharedHUD.contentView = PKHUDStatusProgressView(title: "", subtitle: title)

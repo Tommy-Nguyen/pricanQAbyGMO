@@ -8,20 +8,21 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
 		</dict>
 		<key>PKHUD.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
+		</dict>
+		<key>SwiftyJSON.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -31,17 +32,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4D7310E2B1BB50F46988F3575D4ED670</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>57CFC4DF5A94826729A3A532FC59EE52</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>8479B4B2FE48BC1FF3AD9763D939F5CA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A28BAFEA610EB1BB444EA2DFD05536F5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E3C6C463C0DDC45A8ABC9861A7522F1E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

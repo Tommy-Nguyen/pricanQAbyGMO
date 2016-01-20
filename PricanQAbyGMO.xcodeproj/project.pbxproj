@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F23E3061C4F494F00870D0C /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F23E3051C4F494F00870D0C /* DataManager.swift */; };
+		5F23E3081C4F6C3200870D0C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F23E3071C4F6C3200870D0C /* CoreData.framework */; };
+		5F23E3131C4F6F8F00870D0C /* PQADataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5F23E3111C4F6F8F00870D0C /* PQADataModel.xcdatamodeld */; };
+		5F23E3161C4F6FF800870D0C /* EntityConsultation+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F23E3141C4F6FF800870D0C /* EntityConsultation+CoreDataProperties.swift */; };
+		5F23E3171C4F6FF800870D0C /* EntityConsultation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F23E3151C4F6FF800870D0C /* EntityConsultation.swift */; };
 		5F28B4FA1C488C780060A274 /* Consultation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F28B4F91C488C780060A274 /* Consultation.swift */; };
 		5F28B5121C48985D0060A274 /* FrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F28B4FC1C48985D0060A274 /* FrameView.swift */; };
 		5F28B5131C48985D0060A274 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F28B4FD1C48985D0060A274 /* Images.xcassets */; };
@@ -53,6 +58,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F23E3051C4F494F00870D0C /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		5F23E3071C4F6C3200870D0C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		5F23E3121C4F6F8F00870D0C /* PQADataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PQADataModel.xcdatamodel; sourceTree = "<group>"; };
+		5F23E3141C4F6FF800870D0C /* EntityConsultation+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EntityConsultation+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		5F23E3151C4F6FF800870D0C /* EntityConsultation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityConsultation.swift; sourceTree = "<group>"; };
 		5F28B4F91C488C780060A274 /* Consultation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Consultation.swift; sourceTree = "<group>"; };
 		5F28B4FC1C48985D0060A274 /* FrameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameView.swift; sourceTree = "<group>"; };
 		5F28B4FD1C48985D0060A274 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -108,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F23E3081C4F6C3200870D0C /* CoreData.framework in Frameworks */,
 				A5F65B393281237D9A160355 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,7 +256,10 @@
 		5F9B2E1A1C43532900BD2FB9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5F23E3141C4F6FF800870D0C /* EntityConsultation+CoreDataProperties.swift */,
+				5F23E3151C4F6FF800870D0C /* EntityConsultation.swift */,
 				5F28B4F91C488C780060A274 /* Consultation.swift */,
+				5F23E3111C4F6F8F00870D0C /* PQADataModel.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -254,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				5F52B22C1C478B5900CEF79E /* NetworkManager.swift */,
+				5F23E3051C4F494F00870D0C /* DataManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -307,6 +322,7 @@
 		A481CDF24C060804099873D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5F23E3071C4F6C3200870D0C /* CoreData.framework */,
 				84B808E2DC387A847880FAD3 /* Pods.framework */,
 			);
 			name = Frameworks;
@@ -453,6 +469,7 @@
 				5F28B51A1C48985D0060A274 /* PKHUDImageView.swift in Sources */,
 				5F28B51D1C48985D0060A274 /* PKHUDStatusProgressView.swift in Sources */,
 				5F28B5201C48985D0060A274 /* PKHUDSuccessView.swift in Sources */,
+				5F23E3131C4F6F8F00870D0C /* PQADataModel.xcdatamodeld in Sources */,
 				5F28B51E1C48985D0060A274 /* PKHUDStatusView.swift in Sources */,
 				5F28B5211C48985D0060A274 /* PKHUDSystemActivityIndicatorView.swift in Sources */,
 				5F28B5191C48985D0060A274 /* PKHUDErrorView.swift in Sources */,
@@ -468,11 +485,13 @@
 				5F28B52F1C48A96C0060A274 /* PQAHomeDetailViewController.swift in Sources */,
 				5F28B5151C48985D0060A274 /* PKHUD.swift in Sources */,
 				5F28B5241C48985D0060A274 /* PKHUDWideBaseView.swift in Sources */,
+				5F23E3171C4F6FF800870D0C /* EntityConsultation.swift in Sources */,
 				5F9B2E251C43533500BD2FB9 /* ExtensionClass.swift in Sources */,
 				5F28B5231C48985D0060A274 /* PKHUDTitleView.swift in Sources */,
 				5F9B2E181C43532000BD2FB9 /* FontUtils.swift in Sources */,
 				5F28B5261C48985D0060A274 /* WindowRootViewController.swift in Sources */,
 				5F9B2E001C43526400BD2FB9 /* AppDelegate.swift in Sources */,
+				5F23E3061C4F494F00870D0C /* DataManager.swift in Sources */,
 				5F9B2E231C43533500BD2FB9 /* Common.swift in Sources */,
 				5F9B2E241C43533500BD2FB9 /* DefineNames.swift in Sources */,
 				5F28B51C1C48985D0060A274 /* PKHUDSquareBaseView.swift in Sources */,
@@ -480,6 +499,7 @@
 				5F28B5181C48985D0060A274 /* PKHUDAssets.swift in Sources */,
 				A962D6731C43FF4400D720DE /* PQADashboardViewController.swift in Sources */,
 				5F28B5121C48985D0060A274 /* FrameView.swift in Sources */,
+				5F23E3161C4F6FF800870D0C /* EntityConsultation+CoreDataProperties.swift in Sources */,
 				5F28B51F1C48985D0060A274 /* PKHUDSubtitleView.swift in Sources */,
 				5F9B2E191C43532000BD2FB9 /* UIUtils.swift in Sources */,
 			);
@@ -595,11 +615,14 @@
 			baseConfigurationReference = 99B16C5D090BF3C8E7E55105 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PricanQAbyGMO/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = KLL.PricanQAbyGMO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -608,11 +631,13 @@
 			baseConfigurationReference = 9C8EF589E1456338211EE097 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PricanQAbyGMO/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = KLL.PricanQAbyGMO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};
@@ -638,6 +663,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5F23E3111C4F6F8F00870D0C /* PQADataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5F23E3121C4F6F8F00870D0C /* PQADataModel.xcdatamodel */,
+			);
+			currentVersion = 5F23E3121C4F6F8F00870D0C /* PQADataModel.xcdatamodel */;
+			path = PQADataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5F9B2DF41C43526400BD2FB9 /* Project object */;
 }

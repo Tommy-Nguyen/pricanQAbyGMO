@@ -102,4 +102,9 @@ class PQADashboardViewController: UITabBarController {
             item.imageInsets = UIEdgeInsetsMake(myCGFloat, myCGFloat, myCGFloat, myCGFloat);
         }
     }
+    
+    /*
+    // MARK: - Add Center TabBar
+    */
+
 }

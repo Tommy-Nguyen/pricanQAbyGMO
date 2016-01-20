@@ -27,7 +27,7 @@ class PQAHomeDetailViewController: UIViewController {
     @IBOutlet weak var viewComment: UIView!
     @IBOutlet weak var viewWatch: UIView!
     
-    var objConsultation : Consultation = Consultation(json: "")
+    var objConsultation : Consultation = Consultation(json: nil)
 
     override func viewDidLoad() {
         super.viewDidLoad()

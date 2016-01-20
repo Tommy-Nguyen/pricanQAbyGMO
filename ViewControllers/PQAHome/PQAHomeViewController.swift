@@ -38,13 +38,12 @@ class PQAHomeViewController: PQABaseViewController, UITableViewDelegate, UITable
         NetworkManager .sharedManager .getListDataFromServer { (responseObect: NSMutableArray) -> Void in
             NetworkManager .sharedManager .hideAnimatedProgressHUD()
             self.list = responseObect
+            DataManager .sharedManager .saveDaTaToLocal(self.list)
             self.homeTableView .reloadData()
         }
     }
     
-    /*
-    // MARK: - UITableView DataSource
-    */
+    // MARK: - UITableViewDataSource
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return self.list.count
@@ -61,11 +60,10 @@ class PQAHomeViewController: PQABaseViewController, UITableViewDelegate, UITable
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView .dequeueReusableCellWithIdentifier(kCustomHomeCellIdentifier, forIndexPath: indexPath) as! PQACustomHomeTableViewCell
         
-        let objDict = self.list .objectAtIndex(indexPath.section)
-        let objConsultation = Consultation(json: objDict)
+        let objDict = self.list .objectAtIndex(indexPath.section) as! Consultation
         
         cell.btnActionDummy .addTarget(self, action: "pressActiveDummyRandom:", forControlEvents: UIControlEvents.TouchUpInside)
-        cell .fillDataToCell(objConsultation)
+        cell .fillDataToCell(objDict)
         
         cell.accessoryType = UITableViewCellAccessoryType.None
         cell.selectionStyle = UITableViewCellSelectionStyle.None;
@@ -75,15 +73,14 @@ class PQAHomeViewController: PQABaseViewController, UITableViewDelegate, UITable
         return cell
     }
     
-    /*
-    // MARK: - UITableView Delegate
-    */
+    // MARK: - UITableViewDelegate
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        DataManager .sharedManager .getAllConsultationRecordFromLocal("EntityConsultation")
+
         let detailCell = PQAHomeDetailViewController .init(nibName: "PQAHomeDetailViewController", bundle: NSBundle.mainBundle())
+        let objConsultation = self.list .objectAtIndex(indexPath.section) as! Consultation
         
-        let objDict = self.list .objectAtIndex(indexPath.section)
-        let objConsultation = Consultation(json: objDict)
         detailCell.objConsultation = objConsultation
         
         self.navigationController! .pushViewController(detailCell, animated: true)

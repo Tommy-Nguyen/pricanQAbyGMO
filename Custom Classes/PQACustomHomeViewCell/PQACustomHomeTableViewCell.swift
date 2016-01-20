@@ -38,12 +38,12 @@ class PQACustomHomeTableViewCell: UITableViewCell {
     func fillDataToCell(objConsultation: Consultation) {
         let url = NSURL(string: "\(objConsultation.urlImage)")
         
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
-            let image =  UIImage(data: NSData(contentsOfURL: url!)!)! as UIImage
-            dispatch_async(dispatch_get_main_queue()) {
-                self.avatar.image = image
+        getDataFromUrl(url!) { (data, response, error)  in
+            dispatch_async(dispatch_get_main_queue()) { () -> Void in
+                guard let data = data where error == nil else { return }
+                self.avatar.image = UIImage(data: data)
             }
-        })
+        }
         
         self.name.text = objConsultation.nickname
         self.age.text = "\(objConsultation.age)"
@@ -54,4 +54,11 @@ class PQACustomHomeTableViewCell: UITableViewCell {
         self.numberWatch.text = "\(objConsultation.watch_count)"
     }
     
+    // Image is download from server by this method
+    
+    func getDataFromUrl(url:NSURL, completion: ((data: NSData?, response: NSURLResponse?, error: NSError? ) -> Void)) {
+        NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) in
+            completion(data: data, response: response, error: error)
+            }.resume()
+    }
 }
