@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import ICSPullToRefresh
 
-class PQAHomeViewController: PQABaseViewController, UITableViewDelegate, UITableViewDataSource {
+class PQAHomeViewController: PQABaseViewController, UITableViewDelegate, UITableViewDataSource, PQAHomeDetailViewControllerDelegate {
 
     @IBOutlet weak var homeTableView: UITableView!
     
@@ -23,6 +24,10 @@ class PQAHomeViewController: PQABaseViewController, UITableViewDelegate, UITable
         self.homeTableView.delegate = self
         self.homeTableView.dataSource = self
         self.homeTableView .registerNib(UINib(nibName: "PQACustomHomeTableViewCell", bundle: nil), forCellReuseIdentifier: kCustomHomeCellIdentifier)
+        
+        self.homeTableView .addPullToRefreshHandler { () -> () in
+            self .getDataFromServer()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,16 +38,32 @@ class PQAHomeViewController: PQABaseViewController, UITableViewDelegate, UITable
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
-        NetworkManager .sharedManager .showAnimatedProgressHUD(kLoadingTitle)
-        NetworkManager .sharedManager .getListDataFromServer { (responseObect: NSMutableArray) -> Void in
-            NetworkManager .sharedManager .hideAnimatedProgressHUD()
-            self.list = responseObect
-            DataManager .sharedManager .saveDaTaToLocal(self.list)
-            self.homeTableView .reloadData()
-        }
+        self .getDataFromServer()
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.edgesForExtendedLayout = UIRectEdge.None
+    }
+    
+    // MARK: - Method Call Api
+    
+    func getDataFromServer() {
+        NetworkManager .sharedManager .showAnimatedProgressHUD(kLoadingTitle)
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
+            NetworkManager .sharedManager .getListDataFromServer { (responseObect: NSMutableArray) -> Void in
+                NetworkManager .sharedManager .hideAnimatedProgressHUD()
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    self.list = responseObect
+                    DLog("\(self.list.count)")
+                    //            DataManager .sharedManager .saveDaTaToLocal(self.list)
+                    self.homeTableView .reloadData()
+                    self.homeTableView.pullToRefreshView?.stopAnimating()
+                })
+            }
+        })
+    }
+
     // MARK: - UITableViewDataSource
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -77,11 +98,12 @@ class PQAHomeViewController: PQABaseViewController, UITableViewDelegate, UITable
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         DataManager .sharedManager .getAllConsultationRecordFromLocal("EntityConsultation")
-
+        
         let detailCell = PQAHomeDetailViewController .init(nibName: "PQAHomeDetailViewController", bundle: NSBundle.mainBundle())
         let objConsultation = self.list .objectAtIndex(indexPath.section) as! Consultation
         
         detailCell.objConsultation = objConsultation
+        detailCell.delegate = self
         
         self.navigationController! .pushViewController(detailCell, animated: true)
     }
@@ -90,5 +112,9 @@ class PQAHomeViewController: PQABaseViewController, UITableViewDelegate, UITable
         let alert = UIAlertController(title: "Alert", message: "Message", preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
         self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    func homdeDelegateFunction(controller: PQAHomeDetailViewController, text: String) {
+        DLog("Delegate action \(text) \(controller)")
     }
 }

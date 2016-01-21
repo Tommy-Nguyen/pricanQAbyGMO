@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ICSPullToRefresh.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>PKHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,7 +32,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>091863A944C2766F008E2A4ACB975229</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>432ECC54282C84882B482CCB4CF227FC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>62C2246B5E77548783B78455B7BD9C9B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -37,12 +52,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A28BAFEA610EB1BB444EA2DFD05536F5</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E3C6C463C0DDC45A8ABC9861A7522F1E</key>
+		<key>9BD0C3DA2D950E2F64FFCD2DA405F8BC</key>
 		<dict>
 			<key>primary</key>
 			<true/>

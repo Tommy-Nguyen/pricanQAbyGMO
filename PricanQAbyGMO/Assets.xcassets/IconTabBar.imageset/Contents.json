@@ -2,11 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "TabBarH-1.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "TabBarH-1.png",
+      "filename" : "TabBarH@2x.png",
       "scale" : "2x"
     },
     {

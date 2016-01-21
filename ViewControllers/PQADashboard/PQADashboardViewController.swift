@@ -8,24 +8,15 @@
 
 import UIKit
 
-let myCGFloat = CGFloat(-8)
-
 class PQADashboardViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self .createTabBarView()
         
-        for var currentTabBarItem in self.tabBar.items! {
-            if currentTabBarItem.title == "" {
-                currentTabBarItem.imageInsets = UIEdgeInsetsMake(myCGFloat, myCGFloat, myCGFloat, myCGFloat);
-            }
-        }
-        
         UITabBar.appearance().backgroundImage = UIImage(named: "tabBar1")
         self.tabBar.setValue(true, forKey: "_hidesShadow")
-
-        self.tabBarController?.tabBar.clipsToBounds = true
+        self .addCenterButtonWithImage(UIImage(named: "IconTabBar")!, highlightImage: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -62,7 +53,6 @@ class PQADashboardViewController: UITabBarController {
         pqaMyPageVC.view.backgroundColor = UIColor .greenColor();
 
         let pqaCenterView = PQAHomeViewController() as PQAHomeViewController
-        pqaCenterView.view.backgroundColor = UIColor .greenColor();
         
         let pqaCenterNav: UINavigationController = UINavigationController.init(rootViewController: pqaCenterView)
         pqaCenterNav.navigationBarHidden = false
@@ -97,14 +87,34 @@ class PQADashboardViewController: UITabBarController {
         self.viewControllers = [pqaHomeNav, pqaSearchNav, pqaCenterNav, pqaInformationNav, pqaMyPageNav]
     }
     
-    override func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem) {
-        if item.title == "" {
-            item.imageInsets = UIEdgeInsetsMake(myCGFloat, myCGFloat, myCGFloat, myCGFloat);
+    // MARK: - Add Center TabBar
+    func addCenterButtonWithImage(buttonImage: UIImage, highlightImage: UIImage?) {
+        let buttonCenter = UIButton()
+        
+        buttonCenter.frame = CGRectMake(0, 0, buttonImage.size.width, buttonImage.size.height)
+        buttonCenter.setBackgroundImage(buttonImage, forState: UIControlState.Normal)
+        buttonCenter.setBackgroundImage(highlightImage, forState: UIControlState.Highlighted)
+        buttonCenter .addTarget(self, action: "buttonEvent", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        DLog("\(buttonImage.size.height)-- \(self.tabBar)")
+        
+        let heightDifference = buttonImage.size.height - 50.0
+        
+        if heightDifference < 0 {
+            buttonCenter.center = (self.tabBar.center)
         }
+        else {
+            var center: CGPoint = self.tabBar.center
+            center.y = center.y - self.tabBar.frame.origin.y - heightDifference/2.0
+            buttonCenter.center = center
+        }
+        
+        self.tabBar .addSubview(buttonCenter)
     }
     
-    /*
-    // MARK: - Add Center TabBar
-    */
-
+    func buttonEvent() {
+        let appDelegate  = UIApplication.sharedApplication().delegate as! AppDelegate
+        let viewController = appDelegate.window!.rootViewController as! PQADashboardViewController
+        viewController.selectedIndex = 2
+    }
 }

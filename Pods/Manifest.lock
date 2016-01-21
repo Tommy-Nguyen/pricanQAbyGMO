@@ -1,10 +1,12 @@
 PODS:
   - Alamofire (3.1.5)
+  - ICSPullToRefresh (0.3)
   - PKHUD (2.2.5)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
   - Alamofire (~> 3.0)
+  - ICSPullToRefresh (~> 0.3)
   - PKHUD
   - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
 
@@ -19,6 +21,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: 5f730ba29fd113b7ddd71c1e65d0c630acf5d7b0
+  ICSPullToRefresh: 6ccda740c475f7e6dc157553518bfae32fa2cb57
   PKHUD: 15d9db01fb008bb9247c6d785c585f587955b113
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 

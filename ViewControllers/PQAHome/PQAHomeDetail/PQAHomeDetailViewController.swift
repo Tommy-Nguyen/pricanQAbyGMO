@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol PQAHomeDetailViewControllerDelegate {
+    func homdeDelegateFunction(controller:PQAHomeDetailViewController,text:String)
+}
+
 class PQAHomeDetailViewController: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
@@ -26,6 +30,8 @@ class PQAHomeDetailViewController: UIViewController {
     @IBOutlet weak var viewLike: UIView!
     @IBOutlet weak var viewComment: UIView!
     @IBOutlet weak var viewWatch: UIView!
+    
+    var delegate : PQAHomeDetailViewControllerDelegate! = nil
     
     var objConsultation : Consultation = Consultation(json: nil)
 
@@ -99,5 +105,9 @@ class PQAHomeDetailViewController: UIViewController {
     
     func setOriginYToView(theView : UIView , andFloatY: CGFloat) {
         theView.frame = CGRectMake(theView.frame.origin.x, andFloatY, theView.frame.size.width, theView.frame.size.height)
+    }
+    
+    @IBAction func pressActionCallDelegate(sender: AnyObject) {
+        self.delegate .homdeDelegateFunction(self, text: "Delegate action")
     }
 }
