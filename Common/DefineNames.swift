@@ -8,14 +8,7 @@
 
 import Foundation
 
-let PHRBaseURL                  = "http://10.1.20.2:8080/"
+let kBaseURL            = "http://www.json-generator.com/api/json/get/cfJoaXblBu?indent=2"
 
-let kAPIHeaderJson              = "application/json"
-let kAPIHeaderAccept            = "Accept"
-let kApiHeaderContentType       = "Content-Type"
-
-let kAPIPatchSignIn             = "api/accounts/login"
-let kAPIKeyAccessToken          = "token"
-
-let kAPIKeyEmail                = "email"
-let kAPIKeyPassword             = "password"
+let kLoadingTitle                   : String = "Loading..."
+let kCustomHomeCellIdentifier       : String = "kCustomHomeCellIdentifier"

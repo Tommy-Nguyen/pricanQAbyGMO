@@ -7,3 +7,6 @@
 //
 
 import Foundation
+
+var kTabBarHeight:Int = 55
+var kTabBarOffset:Double = -10

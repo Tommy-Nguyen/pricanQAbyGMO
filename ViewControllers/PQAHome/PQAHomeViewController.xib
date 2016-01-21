@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PQAHomeViewController" customModule="PricanQAbyGMO" customModuleProvider="target">
             <connections>
+                <outlet property="homeTableView" destination="JY1-YV-xSN" id="SIb-vd-C8n"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,15 +16,22 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rf6-Br-8re">
-                    <rect key="frame" x="85" y="269" width="46" height="30"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JY1-YV-xSN">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <animations/>
-                    <state key="normal" title="Button"/>
-                </button>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
             </subviews>
             <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="JY1-YV-xSN" secondAttribute="trailing" id="E4n-r8-myg"/>
+                <constraint firstItem="JY1-YV-xSN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="KmL-kV-VKP"/>
+                <constraint firstItem="JY1-YV-xSN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ajs-Mh-qBg"/>
+                <constraint firstAttribute="bottom" secondItem="JY1-YV-xSN" secondAttribute="bottom" id="jjN-CJ-fMO"/>
+            </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="479" y="390"/>
         </view>
     </objects>
 </document>
